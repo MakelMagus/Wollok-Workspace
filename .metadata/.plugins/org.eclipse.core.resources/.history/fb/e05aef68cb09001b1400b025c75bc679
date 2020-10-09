@@ -1,0 +1,5 @@
+/** First Wollok example */
+object aldea {
+	var property aldeanos = []
+	var property terrenos = []
+}

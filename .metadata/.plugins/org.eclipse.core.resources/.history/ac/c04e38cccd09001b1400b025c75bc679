@@ -1,0 +1,32 @@
+class Person {
+	var property hunger = 0
+	var property place = "aldea"
+	
+	constructor (chosen_name) {
+		const name = chosen_name
+	}
+	
+	method ir_a_terreno(terrain){
+		place = terrain
+	}
+	method trabajar_terreno(){
+		place.work(hunger/2)
+		hunger += 5
+	}
+	method eat(food) {
+		food.consume(hunger)
+		hunger = 0
+	}
+}
+class Terrain {
+	var potential_food = 0 
+	var current_food = 0
+	
+	constructor (size){
+		const max_food = size	
+	}
+	
+	method work(amount){
+		potential_food += amount
+	}
+}

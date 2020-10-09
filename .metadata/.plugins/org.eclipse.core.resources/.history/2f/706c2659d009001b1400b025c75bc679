@@ -1,0 +1,12 @@
+object aldea {
+	var property aldeanos = []
+	var property terrenos = []
+}
+
+object food {
+	var property amount = 0
+	
+	method consume(food_consumed){
+		amount -= food_consumed
+	}
+}

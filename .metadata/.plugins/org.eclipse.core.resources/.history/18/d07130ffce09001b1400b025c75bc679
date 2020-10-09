@@ -1,0 +1,37 @@
+class Person {
+	var property hunger = 0
+	var property place = "aldea"
+	
+	method ir_a_terreno(terrain){
+		place = terrain
+	}
+	method trabajar_terreno(amount){
+		place.work(amount)
+		hunger += amount
+	}
+	method eat(food) {
+		food.consume(hunger)
+		hunger = 0
+	}
+	method next_day() {
+		hunger += 5
+	}
+}
+class Terrain {
+	
+	var potential_food = 0 
+	var current_food = 0
+	var value
+		
+	method work(amount){
+		potential_food += amount*value
+	}
+	
+	method next_day() {
+		if (current_food <= potential_food){
+			current_food += 10
+		}
+	}
+	
+	
+}
