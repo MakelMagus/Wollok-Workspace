@@ -6,7 +6,6 @@ class Person {
 		place = terrain
 	}
 	
-	//WHAT DO YOU MEAN THE STRING DOESN'T UNDERSTAND? IT'S IS NOT SUPPOSED TO KNOW IF THE RECEPTOR UNDERSTANDS!
 	method trabajar_terreno(amount){
 		if (place.workable()) {
 			place.work(amount)
