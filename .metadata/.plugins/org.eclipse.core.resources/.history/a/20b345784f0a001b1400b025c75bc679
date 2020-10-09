@@ -1,6 +1,4 @@
-
 class Person {
-	
 	var property hunger = 0
 	var property place = "aldea"
 	
@@ -9,7 +7,7 @@ class Person {
 	}
 	
 	//WHAT DO YOU MEAN THE STRING DOESN'T UNDERSTAND? IT'S IS NOT SUPPOSED TO KNOW IF THE RECEPTOR UNDERSTANDS!
-	method work_terrain(amount){
+	method trabajar_terreno(amount){
 		if (place.workable()) {
 			place.work(amount)
 			hunger += amount
@@ -22,13 +20,13 @@ class Person {
 	method next_day() {
 		hunger += 5
 	}
-}
 
 class Terrain {
 	
 	var potential_food = 0 
 	var current_food = 0
 	var value
+	
 	method workable() {return true}
 	method work(amount){
 		potential_food += amount*value
@@ -40,9 +38,5 @@ class Terrain {
 		}
 	}
 	
+	
 }
-
-const plain_soil = new Terrain(value = 2)
-const useless_soil = new Terrain(value = 0.5)
-const rich_soil = new Terrain(value = 5)
-const pablo = new Person()

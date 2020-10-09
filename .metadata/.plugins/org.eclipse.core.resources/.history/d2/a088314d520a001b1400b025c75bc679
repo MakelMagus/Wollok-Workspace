@@ -14,7 +14,7 @@ object aldea {
 	method birth(name) {
 		if (food_amount > 20+20*people.size()){
 			self.consume_food(20)
-			name = new Person()
+			const name = new Person()
 		}
 	}
 	

@@ -1,3 +1,5 @@
+import Class_list.wlk
+
 object aldea {
 	var property size = 0
 	var property food_amount = 0
@@ -14,7 +16,6 @@ object aldea {
 	method birth(name) {
 		if (food_amount > 20+20*people.size()){
 			self.consume_food(20)
-			name = new Person()
 		}
 	}
 	
